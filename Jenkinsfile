@@ -96,7 +96,7 @@ pipeline {
                     )
 
                     if (status == 0) {
-                        sh "kubectl apply -f service-green.yaml""
+                        sh "kubectl apply -f service-green.yaml"
                     } else {
                         echo "application stable in blue environment"
                     }

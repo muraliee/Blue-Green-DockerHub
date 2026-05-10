@@ -60,7 +60,7 @@ pipeline {
                 sh "kubectl apply -f blue.yaml"
                      
                     def status = sh(
-                        script: 'kubectl rollout status deployment/nodejs-app-green --timeout=30s',
+                        script: 'kubectl rollout status deployment/nodejs-app-blue --timeout=30s',
                         returnStatus: true
                     )
 

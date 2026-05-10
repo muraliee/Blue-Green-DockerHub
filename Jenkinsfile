@@ -13,7 +13,7 @@ pipeline {
     stage("Clone code from GitHub") {
             steps {
                 script {
-                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/muraliee/blue-green-deployement']])
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GITHUB_CREDENTIALS', url: 'https://github.com/muraliee/Blue-Green-DockerHub']])
                 }
             }
         }

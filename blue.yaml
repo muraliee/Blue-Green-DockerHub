@@ -1,0 +1,24 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nodejs-app-blue
+  namespace: default
+  labels:
+    app: nodejs-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodejs-app
+      version: blue
+  template:
+    metadata:
+      labels:
+        app: nodejs-app
+        version: blue
+    spec:
+      containers:
+      - name: nodejs-app
+        image: "mohanck/practice-images:latest"
+        ports:
+          - containerPort: 3000

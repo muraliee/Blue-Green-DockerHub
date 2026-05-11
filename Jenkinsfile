@@ -55,7 +55,7 @@ pipeline {
 	
             steps {
               script {
-                sh ('aws eks update-kubeconfig --name mohan-cluster5 --region us-east-2')
+                sh ('aws eks update-kubeconfig --name mohan-cluster7 --region us-east-2')
                 sh "kubectl get ns"
                 sh "kubectl apply -f blue.yaml"
                      
@@ -86,7 +86,7 @@ pipeline {
 	
             steps {
               script {
-                sh ('aws eks update-kubeconfig --name mohan-cluster5 --region us-east-2')
+                sh ('aws eks update-kubeconfig --name mohan-cluster7 --region us-east-2')
                 sh "kubectl get ns"
                 sh "kubectl apply -f green.yaml"
                      
